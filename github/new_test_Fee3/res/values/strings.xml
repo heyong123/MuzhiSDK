@@ -1,0 +1,5 @@
+<resources>
+
+    <string name="app_name">羊羊去哪儿</string>
+	<string name="sf_class_name">mobi.zty.pay.MainActivity</string>
+</resources>

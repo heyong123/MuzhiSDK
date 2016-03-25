@@ -1,0 +1,3 @@
+com.pansen.zumalocal.BuildConfig
+com.pansen.zumalocal.R:
+    10:10:public R()

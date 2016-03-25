@@ -1,0 +1,505 @@
+{
+
+    "listLimitInfo": [//限额对象列表
+        {
+            "id": "301_01", //计费点唯一标识
+            "limit": 50     //该计费点可用额度 （单位分）
+        },
+        {
+            "id": "301_02",
+            "limit": 100
+        }
+    ],
+    "lisMkInfo": [//计费类别mk对象列表
+        {
+            "id": 7,  //计费类别唯一标识 lg： 乐游是 5
+            "pay_id":7_1,//该计费组合的唯一标识
+            "send_num": "10086",//短代支付时 发送短信上行端口
+            "vertify_num": "1008601",//验证码的下行端口
+            "confim_num": "10086",//回复验证码的上行端口
+            "intercept_content":"世纪龙_流量币" //该计费 下行需要拦截的 内容
+            "sp_identify": "5231a",//商户的唯一标识 商户号
+            "app_id": "ddd",//应用id
+            "app_name": "羊羊去哪",//应用名称
+            "sp_key": "$e#dg&s",//计费方分配的key（密钥之类的东西）
+            "sp_key2": "$dddd",//多个key的情况
+            "sp_sign_type": "MD5",//加密的方式
+            "pay_url1": "",//支付要用到的url
+            "pay_url2": "$dddd",//支付要用到的另一个url
+            "sp_channel": "$e#dg&s",//支付分配的渠道号
+            "mkClassName":"com.xx" 
+            "time_out":3000
+            "need_count:"true
+        }
+    ]
+    "listShopInfo": [//游戏的商品对象列表（每个游戏，每个游戏的商品个数不一样）
+        {
+            "index": 0,//该商品支付时 传入的索引
+            "listGroupInfo": [//该商品 拥有的计费组合对象列表
+                
+                    {//计费组合对象
+                        "delay": 500,//该组合计费时 的时间间隔
+                        "listFeeInfo": [//该计费组合 中的计费对象列表
+                            {
+                                "pay_id",//某套计费的唯一标识
+                                "id": "301_01",//该计费点的唯一标识
+                                "mk": 7,//该计费点所属的计费类别
+                                "pay_code": "523101",//该计费点 的计费代码/短信的内容
+                                "consume": 10,//该计费点 的消费价格（单位分）
+                                "name":"10元",//该计费点的名称
+                                "verify":0   //是否需要回复验证码 0不需要 1需要
+                            }                        
+                            ]
+                    }
+                
+            ]
+        }
+    ]
+}
+
+<--   上面是协议部分，下面是一些具体支付方式 的实例-->
+下面写一个 mkinfo动漫的列子用于测试
+"lisMkInfo": [//计费类别mk对象列表
+        {
+            "id": 20,  //计费类别唯一标识 lg： 乐游是 5
+            "send_num": "10658099866",//短代支付时 发送短信上行端口
+            "vertify_num": "1065809986601",//验证码的下行端口
+            "confim_num": "1065809986601",//回复验证码的上行端口
+            "intercept_content":"东漫社" //该计费 下行需要拦截的 内容
+        }
+    ],
+下面是一个乐游 mk和 fee部分的配置
+"lisMkInfo": [
+        {
+            "id": 5,  
+            "app_id": "300009153610",
+            "sp_key": "03B24935332BA767220AA2A39C301078",
+            "sp_channel": "5480453"
+        }
+    ]
+
+    "listFeeInfo": [
+            {
+                "id": "301_01",
+                "mk": 5,
+                "pay_code": "9",
+                "consume": 200,
+                "name":"10元",
+                "verify":0
+            }
+            ,     
+            {
+                "id": "301_01",
+                "mk": 5,
+                "pay_code": "9",
+                "consume": 200,
+                "name":"10元",
+                "verify":0
+            }                         
+        ]
+下面是饭盒 的mk和fee部分的配置
+"lisMkInfo": [
+        {
+            "id": 5,  
+            "app_id": "300009153610",
+            "sp_key": "03B24935332BA767220AA2A39C301078",
+            "sp_channel": "5480453"
+        },
+        {
+            "id": 13
+        }
+    ]
+
+    "listFeeInfo": [
+            {
+                "id": "301_01",
+                "mk": 13,
+                "pay_code": "002",
+                "consume": 200,
+                "name":"2元",
+                "verify":0
+            }
+            ,     
+            {
+                "id": "301_02",
+                "mk": 5,
+                "pay_code": "9",
+                "consume": 200,
+                "name":"10元",
+                "verify":0
+            }                         
+        ]
+下面是东风 的mk和fee部分的配置
+"lisMkInfo": [
+        {
+            "id": 18,  
+            "send_num": "1065987701"//短代支付时 发送短信上行端口
+            "intercept_content":"世纪龙_流量币"
+            
+        }
+    ]
+
+    "listFeeInfo": [
+            {
+                "id": "301_01",
+                "mk": 18,
+                "pay_code": "500czc202#6",
+                "consume": 200,
+                "name":"2元",
+                "verify":0
+            }
+            ,     
+            {
+                "id": "301_01",
+                "mk": 18,
+                "pay_code": "nc8",
+                "consume": 800,
+                "name":"8元",
+                "verify":1
+            }                         
+        ]
+下面是天翼空间 的mk和fee部分配置
+"lisMkInfo": [
+        {
+            "id": 7
+            "pay_id":7_1,//该计费组合的唯一标识
+            "app_id": "300009153610",
+            "sp_identify": "OPEN_PARTNER_MUZHIYOUWAN",//商户的唯一标识 商户号
+            "app_name": "羊羊去哪儿",//应用名称
+            "sp_key": "5438e99521e747e98a67450f3972e992",//计费方分配的key（密钥之类的东西）
+            "pay_url1": "http://www.gomzone.com:8080/external/tySpaceltOpen_generateMultiOrder.action",//支付要用到的url
+        }
+    ]
+
+    "listFeeInfo": [
+            {
+                "id": "301_01",
+                "pay_id":7_1,//某套计费的唯一标识
+                "mk": 7,
+                "consume": 200,
+                "name":"2元",
+                "verify":0
+            }
+                              
+        ]
+        
+  下面是页游 的mk和fee部分配置
+	"lisMkInfo": [
+        {
+            "id": 11
+            "pay_id":7_1,//该计费组合的唯一标识
+            "sp_identify": "1040",//商户的唯一标识 商户号
+           	"sp_key": "f51a5f5770a39ad7c459667c24f8a7fb",//计费方分配的key（密钥之类的东西）
+            "sp_key2": "5f8ae0ba3467b28452e1697fd368e19f",//多个key的情况
+            "pay_url1": "http://mbp.yiyugame.com/third/fpft.do",//支付要用到的url
+            "vertify_num": "10658899"//验证码的下行端口
+        }
+    ]
+
+    "listFeeInfo": [
+            {
+                "id": "301_01",
+                "pay_id":7_1,//某套计费的唯一标识
+                "mk": 7,
+                "consume": 200,
+                "pay_code": "190",
+                "verify":1
+            }                
+        ]
+  
+    下面是袁林 的mk和fee部分配置
+	"lisMkInfo": [
+        {
+            "id": 25
+            "pay_id":7_1,//该计费组合的唯一标识
+            "vertify_num": "10658008"//验证码的下行端口
+            "send_num": "10690387000212"
+        }
+    ]
+
+    "listFeeInfo": [
+            {
+                "id": "301_01",
+                "pay_id":7_1,//某套计费的唯一标识
+                "mk": 25,
+                "consume": 1000,
+                "pay_code": "XE@100@1000@MZ",
+                "verify":1
+            }                
+        ]
+        
+          下面是北青 的mk和fee部分配置
+	"lisMkInfo": [
+        {
+            "id": 27,
+            "pay_id":7_1,//该计费组合的唯一标识
+            "send_num": "10620977"
+        }
+    ]
+
+    "listFeeInfo": [
+            {
+                "id": "301_01",
+                "pay_id":7_1,//某套计费的唯一标识
+                "mk": 27,
+                "consume": 1000,
+                "vertify_num": "1065515899"//验证码的下行端口
+                "pay_code": "ZJ",
+                "verify":1
+            }                
+        ]
+
+中科的mk和fee部分配置
+	"lisMkInfo": [
+        {
+            "id": 26
+            "pay_id":7_1,//该计费组合的唯一标识
+            "sp_identify": "019",//商户的唯一标识 商户号
+            "pay_url1": "http://218.95.37.4:10901/r.aspx",//支付要用到的url
+            "vertify_num": "1065515899"//验证码的下行端口
+            "send_num": "106905114047"
+        }
+    ]
+
+    "listFeeInfo": [
+            {
+                "id": "301_01",
+                "pay_id":7_1,//某套计费的唯一标识
+                "mk": 26,
+                "pay_code":"0A06",
+                "consume": 600,
+                "name":"0A06004",
+                "verify":1
+            }                
+        ]
+
+
+下面是天翼空间包月 的mk和fee部分配置
+	"lisMkInfo": [
+        {
+            "id": 28
+            "pay_id":7_1,//该计费组合的唯一标识
+            "app_name": "羊羊去哪儿",//应用名称
+            "sp_identify": "7a45bc30d7654c5cb8ab82b4c7316d92", //商户唯一标识
+            "sp_key": "11fb2325d6464c35b33cbbdbcc22e48f",//计费方分配的key（密钥之类的东西）
+            "pay_url1": "http://www.gomzone.com:8080/external/tySpaceccOpen_generateSSOSubscribeOrder.action",//支付要用到的url
+            "vertify_num": "100011888"//验证码的下行端口
+        }
+    ]
+
+    "listFeeInfo": [
+            {
+                "id": "301_01",
+                "pay_id":7_1,//某套计费的唯一标识
+                "mk": 28,
+                "pay_code":"654",
+                "consume": 100,
+                "name":"1元",
+                "verify":0
+            }
+                              
+        ]
+        
+        下面是沃阅读 的mk和fee部分配置
+	"lisMkInfo": [
+        {
+            "id": 29
+            "pay_id":7_1,//该计费组合的唯一标识
+            "app_name": "羊羊去哪儿",//应用名称
+            "sp_identify": "9008", //商户唯一标识
+            "sp_sign_type": "HMAC-SHA1",
+            "sp_key": "suhESjvk",//计费方分配的key（密钥之类的东西）
+            "pay_url1": "http://api.slxz.com.cn/charge-platform/client/client.php",//支付要用到的url
+            "pay_url2": "sa.91muzhi.com:8080/sdk/Open189Rsq",//支付会回调地址
+        }
+    ]
+
+    "listFeeInfo": [
+            {
+                "id": "301_01",
+                "pay_id":7_1,//某套计费的唯一标识
+                "mk": 29,
+                "pay_code":"1089",
+                "consume": 100,
+                "name":"1元",
+                "verify":0
+            }
+                              
+        ]
+        
+下面是一个安安 mk和 fee部分的配置
+"lisMkInfo": [
+        {
+            "id": 4,  
+            "app_id": "",
+            "sp_key": "",
+            "sp_channel": ""
+        }
+    ]
+
+    "listFeeInfo": [
+            {
+                "id": "301_01",
+                "mk": 4,
+                "pay_code": "",
+                "consume": ,
+                "name":"",
+                "verify":0
+            }
+                         
+        ]
+        
+        博士通DDO的mk和fee部分配置
+	"lisMkInfo": [
+        {
+            "id": 30
+            "pay_id":7_1,//该计费组合的唯一标识
+            "pay_url1": "http://218.66.104.164:9233/dm/vcodeHandle",//支付要用到的url1
+            "pay_url1": "http://218.66.104.164:9233/dm/vcodeSubmit",//支付要用到的url2
+            "sp_channel": "D0506",//支付分配的渠道号
+            "app_name": "6",//应用名称
+            "vertify_num": "10658099"//验证码的下行端口
+            "intercept_content":"动漫" //该计费 下行需要拦截的 内容
+        }
+    ]
+
+    "listFeeInfo": [
+            {
+                "id": "301_01",
+                "pay_id":7_1,//某套计费的唯一标识
+                "mk": 30,
+                "consume": 200,//该计费点 的消费价格（单位分）
+                "verify":0
+            }                
+        ]
+        
+        福多多音乐包月的mk和fee部分配置
+	"lisMkInfo": [
+        {
+            "id": 31
+            "pay_id":7_1,//该计费组合的唯一标识
+            "sp_identify": "019",//商户的唯一标识 商户号
+            "pay_url1": "http://218.242.153.106:4000/mgdmv1a/cert",//支付要用到的url
+            "sp_channel": "0187",//支付分配的渠道号
+            "send_num": "1065842230"
+        }
+    ]
+
+    "listFeeInfo": [
+            {
+                "id": "301_01",
+                "pay_id":7_1,//某套计费的唯一标识
+                "mk": 31,
+                "name":"PPSZYZA001_001",
+                "verify":0
+            }                
+        ]
+        
+           福多多RDO订阅的mk和fee部分配置
+	"lisMkInfo": [
+        {
+            "id": 32
+            "pay_id":7_1,//该计费组合的唯一标识
+            "pay_url1": "http://io.iyazo.com/rdo/ncw.ashx",//支付要用到的url
+            "vertify_num": "10658080773",//验证码的下行端口
+            "sp_channel": "0187",//支付分配的渠道号
+            "app_id": "1",//应用id
+            "send_num": "1065842230"
+        }
+    ]
+
+    "listFeeInfo": [
+            {
+                "id": "301_01",
+                "pay_id":7_1,//某套计费的唯一标识
+                "mk": 32,
+                "verify":0
+            }                
+        ]
+           下面是盈华讯方 的mk和fee部分配置
+	"lisMkInfo": [
+        {
+            "id":36,
+            "pay_id":7_1,//该计费组合的唯一标识
+            "sp_identify": "30638",//商户ID
+            "app_id": "A00010",//应用id
+            "pay_url1": "http://119.29.133.73:8080/sdk/FeeRsq/yinghuasdk.action",//支付要用到的url
+            "mkClassName":"mobi.zty.pay.sdk.vfubao.VFuBaoPayInstance"
+        }
+    ]
+
+    "listFeeInfo": [
+            {
+                "id": "301_01",
+                "pay_id":7_1,//某套计费的唯一标识
+                "mk": 36,
+                "consume": 200,
+                "name":"复活",
+                "verify":0
+            }
+                              
+        ] 
+        
+            下面是掌龙 的mk和fee部分配置
+	"lisMkInfo": [
+        {
+            "id":39,
+            "pay_id":7_1,//该计费组合的唯一标识
+            "app_id": "700003777",//应用id
+            "vertify_num": "10658099",//验证码的下行端口
+            "mkClassName":"mobi.zty.pay.sdk.zhanglong.ZhangLongPayInstance"
+        }
+    ]
+
+    "listFeeInfo": [
+            {
+                "id": "301_01",
+                "pay_id":7_1,//某套计费的唯一标识
+                "mk": 39,
+                "pay_code": "300007777002",
+                "verify":0
+            }
+                              
+        ] 
+        
+        
+        
+        
+    2016 新版sdk协议
+    计费请求响应协议：
+    {//计费组合对象
+         "delay": 500,//该组合计费各个计费执行  的时间间隔
+         "time_out":3000,//本次支付 的超时时间 控制
+         "direct_delivery":0//是否可以直接发货 0 不可以 1可以
+         "listFeeInfo": [//该计费组合 中的计费对象列表
+                 {
+                       "pay_type":0,//0 本地和sp对接的支付 1和后台对接的支付
+                       "mk": 7,//该计费点所属的计费类别（pay_type=0的时候本地 需要用到）
+                       "pay_code": "523101",//该计费点 的计费代码/短信的内容
+                       "send_num": "10086",//短代支付时 发送短信上行端口
+                       "need_count:"0,
+                       "verify":0,  //是否需要回复验证码 0不需要 1需要
+                       "mkClassName":"com.xx",   //热更库中对于的 类路径(以后只贵本地支付有用)
+                       "verify_info":{//当pay_type=1&&verify==1的时候  会用到
+                       	   "vertify_type":0,//0代表回复固定的 内容 1代表动态读取对应长度的数字
+                       	   "fixed_content":"是",//当vertify_type=0的时候监听到验证码短息 直接回复该内容
+                       	   "digital_length":3,//当vertify_type=1 时  需要读取验证码的长度
+	                       "vertify_num": "1008601",//验证码的下行端口
+	            		   "confim_num": "10086",//回复验证码的上行端口
+	            		   "intercept_content":"世纪龙_流量币" //该计费 下行需要拦截的 内容
+                       },
+                       "sdk_pay_info":{ //本地支付时用到
+			             "sp_identify": "5231a",//商户的唯一标识 商户号
+			             "app_id": "ddd",//应用id
+			             "sp_channel": "$e#dg&s",//支付分配的渠道号
+			             "app_name": "羊羊去哪",//该套计费应用名称
+			             "sp_key": "$e#dg&s",//计费方分配的key（密钥之类的东西）
+			             "sp_key2": "$dddd",//多个key的情况
+			             "sp_sign_type": "MD5",//加密的方式
+			             "pay_url1": "",//支付要用到的url
+			             "pay_url2": "$dddd",//支付要用到的另一个url
+			             
+                       }
+                  }                        
+               ]
+     }

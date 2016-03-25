@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="290dp"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+    
+    <TextView 
+        android:id="@+id/app_name"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_marginLeft="5dip"
+        android:layout_marginTop="5dip"
+        android:layout_marginBottom="2dip"
+        android:textSize="15sp"
+        android:textColor="#000055"
+        android:text="ceshi....."/>
+    <TextView 
+        android:id="@+id/productname"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_marginLeft="5dip"
+        android:layout_marginTop="2dip"
+        android:layout_marginBottom="2dip"
+        android:textSize="15sp"
+        android:textColor="#000055"
+        android:text="ceshi....."/>
+    <TextView 
+        android:id="@+id/amount"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_marginLeft="5dip"
+        android:layout_marginTop="2dip"
+        android:layout_marginBottom="2dip"
+        android:textSize="15sp"
+        android:textColor="#000055"
+        android:text="ceshi....."/>
+    <TextView 
+        android:id="@+id/telephone"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_marginLeft="5dip"
+        android:layout_marginTop="2dip"
+        android:layout_marginBottom="2dip"
+        android:textSize="15sp"
+        android:textColor="#000055"
+        android:text="ceshi....."/>
+    <TextView 
+        android:id="@+id/detailes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dip"
+        android:layout_marginTop="2dip"
+        android:layout_marginBottom="2dip"
+        android:textSize="13sp"
+        android:textColor="#000055"
+        android:text="ceshi....."/>
+
+<LinearLayout 
+    android:layout_below="@id/detailes"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#e1e1e1"
+    android:orientation="horizontal"
+    >
+    <Button 
+        android:id="@+id/cancel_btn"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="5dip"
+        android:layout_marginTop="5dip"
+        android:layout_marginBottom="5dip"
+        android:layout_marginRight="2dip"
+        android:background="#87CEFA"
+        android:textSize="17sp"
+        android:text="取消支付"
+        android:layout_weight="1"
+		/>
+    
+    <Button 
+        android:id="@+id/confirm_btn"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#87CEFA"
+        android:textSize="17sp"
+        android:layout_marginLeft="2dip"
+        android:layout_marginTop="5dip"
+        android:layout_marginBottom="5dip"
+        android:layout_marginRight="5dip"
+        android:layout_weight="1"
+        android:text="确认支付"
+	/>
+    
+</LinearLayout>
+</LinearLayout>

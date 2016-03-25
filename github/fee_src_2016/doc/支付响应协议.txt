@@ -1,0 +1,141 @@
+        
+    2016 新版sdk协议
+    
+    计费请求响应协议：
+    {//计费组合对象
+    	 "status":200,//服务端返回的状态码(200成功，其他的都代表错误码(无计费可用，或者限额等))
+         "delay": 500,//该组合计费各个计费执行  的时间间隔
+         "time_out":3000//本次支付 的超时时间 控制
+         "group_step":1//1代表 轮询索引
+         "group_count":2//代表可以轮询几次
+         "direct_delivery":0//是否可以直接发货 0 不可以 1可以
+         "listFeeInfo": [//该计费组合 中的计费对象列表
+                 {
+                 	   "order_id":"55555eeee",//该计费点对应的 唯一订单号
+                 	   "fee_name":"复活",
+                       "pay_type":1,//该计费点所属的计费类别（is_general=0的时候本地 需要用到）
+                       "is_general": 0,//0 本地和sp对接的支付 1和后台对接的支付
+                       "need_count:"0,//是否需要统计该计费 的支付过程
+                       "verify":0,  //是否需要回复验证码 0不需要 1需要
+                       "need_sms":0,//是否需要发送短信
+                       "consume": 10,
+                       "mkClassName":"com.xx",   //热更库中对于的 类路径(以后只贵本地支付有用)
+                       "delete_contents":"天翼空间_信息费5元",//删除扣费短信
+                       "listSmsInfo":[{
+                       		"type":0,//0默认发送tring类型的短信，1发送byte数组类型的短信
+                       		"send_num": "10086",//短代支付时 发送短信上行端口
+                       		"sms_content":"指令",//短信内容
+                       		"succ_notify":0,//短信发送成功之后是否需要通知后台
+                       		"sms_notify_url":"" //通知后台发送短信成功的url
+                       },{
+                       		"send_num": "10086",//短代支付时 发送短信上行端口
+                       		"sms_content":"指令",//短信内容
+                       		"succ_notify":0,//短信发送成功之后是否需要通知后台
+                       		"sms_notify_url":"" //通知后台发送短信成功的url
+                       }],
+                       "verify_info":{//verify==1的时候  会用到
+                       	   "vertify_type":0,//0代表回复固定的 内容 1代表动态读取对应长度的数字 并回复 2 读取动态固定长度的数字回传   3(代表1、2都要执行)
+                       	   "vertify_url":"http://**",//回传验证码的url
+                       	   "fixed_content":"是",//当vertify_type=0的时候监听到验证码短息 直接回复该内容
+                       	   "digital_length":3,//当vertify_type=1 时  需要读取验证码的长度
+	                       "vertify_num": "1008601",//验证码的下行端口
+	            		   "confim_num": "10086",//回复验证码的上行端口
+	            		   "intercept_content":"世纪龙_流量币" //该计费 下行需要拦截的 内容
+                       },
+                       "sdk_pay_info":{ //本地支付时用到
+                       	 "pay_code": "523101",//该计费点 的计费代码/短信的内容
+			             "sp_identify": "5231a",//商户的唯一标识 商户号
+			             "app_id": "ddd",//应用id
+			             "sp_channel": "$e#dg&s",//支付分配的渠道号
+			             "app_name": "羊羊去哪",//该套计费应用名称
+			             "sp_key": "$e#dg&s",//计费方分配的key（密钥之类的东西）
+			             "sp_key2": "$dddd",//多个key的情况
+			             "sp_sign_type": "MD5",//加密的方式
+			             "pay_url1": "",//支付要用到的url
+			             "pay_url2": "$dddd",//支付要用到的另一个url
+                       }
+                  }                        
+               ]
+     }
+     
+     激活中预留 anan 和leyou 的初始化信息 协议：(用于刷用户)
+     "mmActivateInfos":[
+     	{
+     		"pay_type": 4,//4是安安支付类型,5是乐游支付类型
+     		"sp_key": "5231a",//计费方分配的key（密钥之类的东西）
+			"app_id": "ddd",//应用id
+			"sp_channel": "$e#dg&s",//支付分配的渠道号
+     	},
+     	{
+     		"pay_type": 5,//4是安安支付类型,5是乐游支付类型
+     		"sp_key": "5231a",//计费方分配的key（密钥之类的东西）
+			"app_id": "ddd",//应用id
+			"sp_channel": "$e#dg&s",//支付分配的渠道号
+     	}
+     ]
+     
+     
+ 下面是一些计费类型的实例
+ //乐游计费 实例
+ {
+    "status": 200,
+    "delay": 500,
+    "time_out": 3000,
+    "direct_delivery": 0,
+    "listFeeInfo": [
+        {
+            "order_id": "55555eeee",
+            "is_general": 0,
+            "pay_type": 5,
+            "need_count": 1,
+            "pay_code": "9",
+            "mkClassName": "mobi.zty.pay.sdk.leyouFee.LeYouFeeInstance",
+            "sdk_pay_info": {
+                "app_id": "300009153610",
+                "sp_channel": "5480453",
+                "sp_key": "03B24935332BA767220AA2A39C301078"
+            }
+        }
+    ]
+}
+
+//安安计费实例
+{
+    "status": 200,
+    "delay": 500,
+    "time_out": 30000,
+    "direct_delivery": 0,
+    "listFeeInfo": [
+        {
+            "order_id": "55555eeee",
+            "is_general": 0,
+            "pay_type": 4,
+            "need_count": 1,
+            "pay_code": "9",
+            "mkClassName": "mobi.zty.pay.sdk.leyouFee.LeYouFeeInstance",
+            "listSmsInfo":[{
+                       		"send_num": "10086",
+                       		"sms_content":"指令",
+                       		"succ_notify":0,
+                       		"sms_notify_url":""
+                       },{
+                       		"send_num": "10086",
+                       		"sms_content":"指令",
+                       		"succ_notify":0,
+                       		"sms_notify_url":""
+                       }],
+            "sdk_pay_info": {
+                "app_id": "300009051374",
+                "sp_channel": "2200167510",
+                "sp_key": "3CB45997F85B027505ED1954E402CC34"
+            }
+            
+        }
+    ]
+}
+
+//模拟一个ddo的支付
+
+ 
+ 
+    

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
+	<classpathentry kind="lib" path="libs/AnAnPay_1.2.0.jar"/>
+	<classpathentry kind="lib" path="libs/dnPayLib.jar"/>
+	<classpathentry kind="lib" path="libs/fanhe_pay2.0.jar"/>
+	<classpathentry kind="lib" path="libs/iap_cmcc_youshu_1.0.9.jar"/>
+	<classpathentry kind="lib" path="libs/ipaynow_plugin_phone_onlywechat_v1.3.0.jar"/>
+	<classpathentry kind="lib" path="libs/fastjsonlib.jar"/>
+	<classpathentry kind="lib" path="libs/sdkzhangzhifu_4.3.08_video_wudanxiangyou.jar"/>
+	<classpathentry kind="lib" path="libs/heju_1.2.7.jar"/>
+	<classpathentry kind="lib" path="libs/VsofoPayApi_1.0.5.1.jar"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>

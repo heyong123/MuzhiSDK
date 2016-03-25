@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="290.0dip"
+    android:layout_height="200.0dip"
+    android:layout_gravity="center_horizontal" >
+<LinearLayout 
+    android:id="@+id/lin1"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#e1e1e1"
+    android:orientation="vertical"
+    >
+    <TextView android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="~~~"
+        android:background="#e1e1e1"
+        android:textSize="18.0dip"/>
+    <TextView android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="~~~"
+        android:background="#e1e1e1"
+        android:textSize="18.0dip"/>
+     <TextView android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="~~~"
+        android:background="#e1e1e1"
+        android:textSize="18.0dip"/>
+     <TextView android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="~~~"
+        android:background="#e1e1e1"
+        android:textSize="18.0dip"/>
+     <TextView android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="~~~"
+        android:background="#e1e1e1"
+        android:textSize="18.0dip"/>
+</LinearLayout>
+
+<LinearLayout 
+    android:layout_below="@id/lin1"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#e1e1e1"
+    android:orientation="horizontal"
+    >
+    <Button android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#e1e1e1"
+        android:layout_weight="1" 
+        android:text="确认购买"/>
+    
+    <Button android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#e1e1e1"
+        android:layout_weight="1" 
+        android:text="取消购买"/>
+    
+</LinearLayout>
+
+</RelativeLayout>

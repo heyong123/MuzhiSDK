@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="290.0dip"
+    android:layout_height="200.0dip"
+    android:layout_gravity="center_horizontal" >
+
+    <LinearLayout
+        android:id="@+id/details_view"
+        android:layout_width="290.0dip"
+        android:layout_height="200.0dip"
+        android:layout_centerInParent="true"
+        android:background="#e1e1e1"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/cancel_btn"
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:layout_gravity="right"
+            android:layout_margin="1.5dip"
+            android:background="#e1e1e1"
+            android:scaleType="fitXY"
+            android:text="x"
+            android:textColor="#000000"
+            android:textSize="25.0dip" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dip"
+            android:background="#e1e1e1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/txt_appname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:text="sdfg"
+                android:textColor="#3b3b3b"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/txt_productname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:text="@string/phone_info_more"
+                android:textColor="#616161"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/txt_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:text="@string/phone_info_more"
+                android:textColor="#616161"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/txt_telephone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:text="@string/phone_info_more"
+                android:textColor="#616161"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/txt_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:text="@string/phone_info_more"
+                android:textColor="#616161"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+            <Button
+                android:id="@+id/confirm_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/confirm"
+                android:textColor="#5f6465"
+                android:textSize="18.0dip" />
+
+    </LinearLayout>
+
+</RelativeLayout>

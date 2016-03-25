@@ -1,0 +1,37 @@
+<resources>
+
+    <string name="app_name_vsofo">V付宝SDK</string>
+    <string name="prompt_payment">支付提示</string>
+    <string name="business_name">商户名称：</string>
+    <string name="product_name">商品名称：</string>
+    <string name="to_pay">支付金额：</string>
+    <string name="pay_warning">本次费用将会从您的话费中扣除，信息费由运营商代收，充值成功后运营商会发短信到您的收件箱。客服热线：400-684-0755</string>
+    <string name="confirm">确认购买</string>
+    <string name="cancel">取消购买</string>
+    <string name="waitting">正在处理，请耐心等待...\n提醒：为保障本次支付结果的准确性，请勿进行其他操作。</string>
+    <string name="phone_info">请输入本机手机号:</string>
+    <string name="phone_info_more">（多卡手机输入默认手机号）</string>
+    <string name="input_phonenum">手机号为空，请重新输入。</string>
+    <string name="input_smscode">验证码未输入，请重新输入。</string>
+    <string name="phone_error">手机号输入有误，请重新输入。</string>
+    <string name="smscode_info">为保证您顺利完成支付，请输入您收到的短信验证码。</string>
+    <string name="money">元</string>
+    <string name="sms_code">验证码</string>
+    <string name="phone_number">手机号码</string>
+    <string name="send_sms">去发短信</string>
+    
+    <string name="sendsms_forbid">短信发送被禁止，短信支付失败。</string>
+    <string name="sendsms_error">短信发送失败，短信支付失败。</string>
+    <string name="smscode_error">验证码未输入，短信支付失败。</string>
+    <string name="pay_success">支付请求已提交，请返回账户查询。</string>
+    <string name="user_confirm">支付请求已提交，请返回短信箱回复确认码。</string>
+    <string name="user_order">确认码提交失败，请返回短信箱回复确认码。</string>
+    <string name="order_error">下单失败，请稍后再试。</string>
+    <string name="network_error">网络连接失败，请检查网络设置。</string>
+    <string name="sms_send_fail">验证码无法发送，请到短信中手动发送。</string>
+    <string name="pay_fail">短信支付失败，请稍后再试。</string>
+    <string name="data_error">数据异常，短信支付失败。</string>
+    <string name="sim_error">未检测到SIM卡，短信支付失败。</string>
+    <string name="exit_pay">退出支付。</string>
+
+</resources>

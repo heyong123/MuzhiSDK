@@ -1,0 +1,55 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:style/Theme.Black.NoTitleBar">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+      <style name="mzDialog" parent="android:style/Theme.Dialog">
+		<item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item> 
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+	</style>
+	
+    <style name="transparent" parent="@android:style/Theme.Dialog">
+		<!-- <item name="android:windowBackground">@color/transparent_background</item>  -->
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:windowFullscreen">true</item>
+		<item name="android:windowIsTranslucent">true</item>
+		<item name="android:windowAnimationStyle">@+android:style/Animation.Translucent</item>
+		<item name="android:background">#00000000</item> <!-- 设置自定义布局的背景透明 -->
+	</style>
+	
+    <style name="CustomDialog" parent="@android:style/Theme.Dialog">  
+        <item name="android:windowContentOverlay">@null</item>  
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>  
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item> 
+	</style>
+	<style name="WxDialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@+android:style/Animation.Translucent</item>
+    </style>  
+    
+	<style name="HejuActivityStyle" parent="AppBaseTheme">
+        
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@drawable/heju_window_bg</item>
+        <item name="android:windowAnimationStyle">@+android:style/Animation.Translucent</item>
+    </style>
+</resources>
